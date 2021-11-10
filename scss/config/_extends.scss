@@ -1,0 +1,38 @@
+%titles{
+    color: color(primary, base);
+    font-family: $font-primary;
+    font-size: map-get($sizes , huge);
+    font-weight:900;
+    line-height: 4.125rem;
+}
+%subtitles{
+    color: color(secondary, dark);
+    font-family: $font-primary;
+    font-size: map-get($sizes , xlarge);
+    font-weight:normal;
+    line-height: 3.625rem;
+}
+%secondary-subtitles{
+    color: color(secondary, base);
+    font-family: $font-primary;
+    font-size: map-get($sizes , large);
+    font-weight:normal;
+    line-height: 3.125rem;
+}
+%description{
+    font-size: map-get($sizes , small);
+}
+@include mq-max(sm) {
+    %titles{
+        font-size: map-get($sizes ,medium);
+        line-height: 2.375rem;
+    }
+    %subtitles{
+        font-size: map-get($sizes , half);
+        line-height:1.625rem;
+    }
+    %secondary-subtitles{
+        font-size: map-get($sizes ,  thumb);
+        line-height:1.375rem;
+    }
+}

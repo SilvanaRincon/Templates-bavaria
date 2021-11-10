@@ -1,0 +1,1007 @@
+.timeline-one{
+    .his-modelo{
+        .card-title{
+            color: color(grayscale, black);
+            font-weight: 900;
+            padding: 55px 26px 0px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .description{
+            @extend %description;
+            padding: 0 33px 45px;
+            text-align: center;
+        }
+        .timeline-block{
+            background: color(secondary, light);
+            padding-top: 50px;
+            position: relative;
+            &:before{
+                content: "";
+                background: linear-gradient(to bottom, rgba(208,196,180,1) 0%,rgba(243,238,232,0) 100%);
+                height: calc(100% - 210px);
+                left: 45px;
+                position: absolute;
+                top: 100px;
+                width: 1px;
+                z-index: 9;
+            }
+            .text-year{
+                font-size: 35px;
+                font-weight: 700;
+                left: 0;
+                padding-left: 70px;
+                position: absolute;
+                top: 70px;
+                text-align: left;
+                &:before{
+                    content: "";
+                    background: color(primary, base);
+                    border: 2px solid color(grayscale, white);
+                    border-radius: 100%;
+                    display: inline-block;
+                    height: 18px;
+                    left: 37px;
+                    position: absolute;
+                    top: 18px;
+                    width: 18px;
+                    z-index: 12;
+                }
+            }
+            .years{
+                left: 0;
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                z-index: 9;
+            }
+            .carrusel-years{
+                .slick-slide{
+                    text-align: center;
+                    h2{
+                        color: #F3EEE8;
+                        display: block;
+                        font-size: map-get($sizes, base);
+                        height: 60px;
+                        opacity: .6;
+                        position: relative;
+                        &:before{
+                            content: "";
+                            background: #F3EEE8;
+                            border-radius: 100%;
+                            display: inline-block;
+                            height: 12px;
+                            left: 38px;
+                            opacity: .6;
+                            position: absolute;
+                            top: 0;
+                            width: 12px;
+                        }
+                    }
+                    &.slick-current{
+                        display: none;
+                    }
+                }
+            }
+            .flechas-timeline{
+                position: absolute;
+                right: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+                .slick-arrow{
+                    background: color(primary, base);
+                    border: none;
+                    display: block;
+                    font-size: 0px;
+                    height: 40px;
+                    width: 35px;
+                    &:hover,
+                    &:focus{
+                        text-decoration: none;
+                    }
+                }
+                .slick-prev{
+                    margin-bottom: 15px;
+                    transform: rotate(90deg);
+                    &:before{
+                        content: "\e902";
+                        color: color(grayscale, white);
+                        font-family: 'iconFont';
+                        font-size: 20px;
+                    }
+                }
+                .slick-next{
+                    transform: rotate(90deg);
+                    &:before{
+                        content: "\e903";
+                        color: color(grayscale, white);
+                        font-family: 'iconFont';
+                        font-size: 20px;
+                    }
+                }
+            }
+            .carrusel-timeline{
+                .item{
+                    position: relative;
+                    .timeline-visual{
+                        position: absolute;
+                        right: 0;
+                        top: -8px;
+                        .time-img{
+                            height: auto;
+                            max-width: 93px;
+                            object-fit: cover;
+                        }
+                    }
+                    .timeline-detail{
+                        margin: 80px 0 0;
+                        p{
+                            align-items: center;
+                            display: flex;
+                            font-size: 14px;
+                            max-width: 210px;
+                            padding: 0 0 44px 71px;
+                            text-align: start;
+                        }
+                    }
+                    .img-time-des{
+                        .card-img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.timeline-two{
+    .his-corona{
+        .card-title{
+            color: color(primary, dark);
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding: 42px 26px 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        p{
+            color: color(primary, dark);
+            font-family: $font-primary;
+            font-size: map-get($sizes, base);
+            font-weight: 400;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0 33px;
+            text-align: center;
+        }
+        .timeline-block{
+            background: color(primary, dark);
+            margin-top: 73px;
+            padding-top: 33px;
+            position: relative;
+            &:before{
+                content: '';
+                background: color(primary, base);
+                height: calc(100% - 230px);
+                left: 42px;
+                position: absolute;
+                top: 110px;
+                width: 1px;
+                z-index: 9;
+            }
+            .text-year{
+                padding-left: 82px;
+                position: absolute;
+                .year{
+                    color: color(primary, base);
+                    font-family: $font-secondary;
+                    font-size: 55px;
+                    font-weight: 700;
+                    left: 0;
+                    margin: 15px 0 23px;
+                    top: 37px;
+                    text-align: left;
+                }
+                h3{
+                    color: color(grayscale, white);
+                    font-family: $font-secondary;
+                    font-size: 20px;
+                    width: 175px;
+                    &::after{
+                        color: color(primary, base);
+                        content: '\e905';
+                        display: block;
+                        font-family: 'iconFont';
+                        font-size: 8px;
+                        padding-top: 31px;
+                    }
+                }
+                &:before{
+                    content: '\e904';
+                    display: inline-block;
+                    font-family: 'iconFont';
+                    font-size: 48px;
+                    left: 18px;
+                    position: absolute;
+                    top: 31px;
+                    z-index: 12;
+                }
+            }
+            .years{
+                left: 0;
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                z-index: 9;
+            }
+            .slick-years{
+                margin-bottom: 0;
+                .slick-slide{
+                    cursor: pointer;
+                    margin-left: 41px;
+                    position: relative;
+                    text-align: start;
+                    .year{
+                        color: color(grayscale, white);
+                        font-family: $font-secondary;
+                        font-size: 24px;
+                        display: block;
+                        margin-bottom: 0;
+                        opacity: 1;
+                    }
+                    h3{
+                        color: color(grayscale, white);
+                        font-family: $font-secondary;
+                        font-size: 16px;
+                        margin-bottom: 56px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        width: 40%;
+                    }
+                    &:before{
+                        content: '\e904';
+                        display: inline-block;
+                        font-family: 'iconFont';
+                        font-size: 27px;
+                        left: -37px;
+                        opacity: 1;
+                        position: absolute;
+                        top: 0;
+                    }
+                    &.slick-current{
+                        display: none;
+                    }
+                }
+            }
+            .arrows-timeline{
+                font-size: 0px;
+                position: absolute;
+                right: 20px;
+                top: 70%;
+                transform: translateY(-50%);
+                z-index: 9;
+                .slick-arrow{
+                    background: none;
+                    border: none;
+                    display: block;
+                    font-size: 0;
+                    height: 40px;
+                    transform: rotate(90deg);
+                    width: 35px;
+                    &:hover,
+                    &:focus{
+                        text-decoration: none;
+                    }
+                }
+                .slick-prev{
+                    margin-bottom: 15px;
+                    &:before{
+                        content: "\e902";
+                        color: color(primary, base);
+                        cursor: pointer;
+                        font-family: 'iconFont';
+                        font-size: 20px;
+                    }
+                }
+                .slick-next{
+                    &:before{
+                        content: "\e903";
+                        color: color(primary, base);
+                        cursor: pointer;
+                        font-family: 'iconFont';
+                        font-size: 20px;
+                    }
+                }
+            }
+            .slick-timeline{
+                .item{
+                    position: relative;
+                    .timeline-visual{
+                        position: absolute;
+                        right: 12px;
+                        top: -6px;
+                        transform: rotate(-25deg);
+                        .time-img{
+                            height: auto;
+                            max-width: 65px;
+                            object-fit: cover;
+                        }
+                    }
+                    .timeline-detail{
+                        margin: 65% 0 0;
+                        p{
+                            align-items: flex-start;
+                            color: color(grayscale, white);
+                            display: flex;
+                            font-size: 14px;
+                            min-height: 265px;
+                            max-width: 280px;
+                            padding: 0 0 154px 82px;
+                            position: relative;
+                            text-align: start;
+                            &::after{
+                                bottom: 60px;
+                                content: "\e902";
+                                color: color(primary, base);
+                                font-family: 'iconFont';
+                                font-size: 20px;
+                                left: 29%;
+                                position: absolute;
+                            }
+                        }
+                    }
+                    .img-time-des{
+                        position: relative;
+                        .card-img{
+                            height: 100%;
+                            max-height: 422px;
+                            width: auto;
+                        }
+                        &::after{
+                            background: linear-gradient(180deg, rgba(10, 27, 52, 0.26) 9.37%, rgba(10, 28, 52, 0.59) 93.13%);
+                            content: '';
+                            display: block;
+                            height: 100vh;
+                            position: absolute;
+                            top: 0;
+                            width: 100vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 300px){
+    .timeline-two{
+        .his-corona{
+            .card-title{
+                font-size: 25px;
+            }
+            p{
+                font-size: map-get($sizes, small);
+            }
+            .timeline-block{
+                margin-top: 43px;
+                &:before{
+                    height: calc(100% - 209px);
+                    left: 30px;
+                }
+                .text-year{
+                    padding-left: 60px;
+                    h3{
+                        font-size: 18px;
+                        width: 170px;
+                        &::after{
+                            padding-top: 22px;
+                        }
+                    }
+                    &:before{
+                        left: 7px;
+                    }
+                }
+                .years{
+                    ul{
+                        padding-left: 12px;
+                    }
+                }
+                .slick-timeline{
+                    .item{
+                        .timeline-detail{
+                            margin: 72% 0 0;
+                            p{
+                                min-height: 264px;
+                                max-width: 256px;
+                                padding: 0 0 154px 61px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 340px){
+    .timeline-one{
+        .his-modelo{
+            .timeline-block{
+                .years{
+                    bottom: 0px;
+                }
+                .carrusel-timeline{
+                    .item{
+                        .timeline-detail{
+                            p{
+                                max-width: 290px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .timeline-two{
+        .his-corona{
+            .timeline-block{
+                &:before{
+                    height: calc(100% - 185px);
+                    left: 59px;
+                    top: 95px;
+                }
+                .text-year{
+                    padding-left: 109px;
+                    h3{
+                        margin-bottom: 19px;
+                        width: 195px;
+                        &::after{
+                            padding-top: 15px;
+                        }
+                    }
+                    &:before{
+                        left: 35px;
+                    }
+                }
+                .slick-years{
+                    .slick-slide{
+                        margin-left: 58px;
+                    }
+                }
+                .slick-timeline{
+                    .item{
+                        .timeline-visual{
+                            right: 42px;
+                        }
+                        .timeline-detail{
+                            margin: 50% 0 0;
+                            p{
+                                min-height: 220px;
+                                max-width: 342px;
+                                padding: 0 0 14% 110px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mq-min(sm){
+    .timeline-one{
+        .his-modelo{
+            .timeline-block{
+                .carrusel-timeline{
+                    .item{
+                        .timeline-visual{
+                            right: 15%;
+                            .time-img{
+                                max-width: 160px;
+                            }
+                        }
+                        .timeline-detail{
+                            p{
+                                max-width: 52%;
+                            }
+                        }
+                    }
+                }
+                .flechas-timeline{
+                    top: 40%;
+                }
+            }
+        }
+    }
+    .timeline-two{
+        .his-corona{
+            .timeline-block{
+                .text-year{
+                    h3{
+                        width: 300px;
+                    }
+                }
+                .slick-timeline{
+                    .item{
+                        .timeline-visual{
+                            right: 15%;
+                            .time-img{
+                                max-width: 120px;
+                            }
+                        }
+                        .timeline-detail{
+                            margin: 25% 0 0;
+                            p{
+                                min-height: 250px;
+                                max-width: 52%;
+                                padding: 0 0 20% 110px;
+                            }
+                        }
+                        .img-time-des{
+                            .card-img{
+                                object-fit: cover;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .arrows-timeline{
+                    top: 40%;
+                }
+            }
+        }
+    }
+}
+@include mq-min(md){
+    .timeline-one{
+        .his-modelo{
+            .card-title{
+                padding: 101px 26px 10px;
+            }
+            .description{
+                font-size: map-get($sizes, base);
+                margin: 0 auto;
+                max-width: 648px;
+                padding-bottom: 87px;
+            }
+            .timeline-block{
+                padding-top: 0;
+                &:before{
+                    content: "";
+                    background: linear-gradient(to bottom, rgba(208,196,180,1) 0%,rgba(243,238,232,0) 100%);
+                    display: block;
+                    height: 1px;
+                    left: 43%;
+                    position: absolute;
+                    top: 114px;
+                    width: 54%;
+                }
+                .text-year{
+                    color: color(grayscale, black);
+                    display: none;
+                    font-size: 40px;
+                    font-weight: 800;
+                    left: 30%;
+                    padding: 0;
+                    top: 88px;
+                    &:before{
+                        left: 125px;
+                    }
+                }
+                .years{
+                    bottom: inherit;
+                    left: inherit;
+                    right: 20px;
+                    top: 92px;
+                    width: 68%;
+                }
+                .flechas-timeline{
+                    bottom: 20px;
+                    left: 0;
+                    text-align: center;
+                    transform: inherit;
+                    top: inherit;
+                    right: inherit;
+                    width: 28%;
+                    .slick-arrow{
+                        display: inline-block;
+                    }
+                    .slick-prev{
+                        margin-right: 65px;
+                        transform: rotate(0deg);
+                    }
+                    .slick-next{
+                        transform: rotate(0deg);
+                    }
+                }
+                .carrusel-years{
+                    .slick-slide{
+                        &.slick-current {
+                            display: block;
+                            font-size: 35px;
+                            font-weight: 800;
+                            h2{
+                                color: color(grayscale, black);
+                                font-size: 40px;
+                                opacity: 1;
+                                padding: 0;
+                                text-align: left;
+                                &:before{
+                                    background: color(primary, base);
+                                    border: 3px solid color(grayscale, white);
+                                    height: 18px;
+                                    left: 126px;
+                                    opacity: 1;
+                                    /*right: 0;*/
+                                    top: 13px;
+                                    width: 18px;
+                                }
+                            }
+                        }
+                        h2{
+                            font-size: 14px;
+                            padding-top: 38px;
+                            text-align: right;
+                            &:before{
+                                left: 118px;
+                                top: 18px;
+                            }
+                        }
+                    }
+                }
+                .carrusel-timeline{
+                    .item{
+                        display: flex;
+                        .timeline-visual{
+                            margin-left: 60px;
+                            padding-bottom: 106px;
+                            padding-top: 50px;
+                            position: static;
+                            width: 16%;
+                            .time-img{
+                                max-width: 174px;
+                            }
+                        }
+                        .img-time-des{
+                            width: 50%;
+                            .card-img{
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .timeline-detail{
+                            margin: 160px 0 0;
+                            padding: 0 35px 0 88px;
+                            width: 32%;
+                            p{
+                                padding: 0 0 14px 0;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .timeline-two{
+        .his-corona{
+            .card-title{
+                font-size: 35px;
+                padding: 39px 26px 5px;
+            }
+            p{
+                font-size: map-get($sizes, base);
+                margin: 0 auto;
+                max-width: 648px;
+            }
+            .timeline-block{
+                padding-top: 0;
+                &:before{
+                    content: "";
+                    background: color(primary, base);
+                    display: block;
+                    height: 1px;
+                    left: 45%;
+                    position: absolute;
+                    top: 122px;
+                    width: 40%;
+                }
+                .text-year{
+                    color: color(grayscale, black);
+                    display: none;
+                    font-size: 40px;
+                    font-weight: 800;
+                    left: 30%;
+                    padding: 0;
+                    top: 88px;
+                    &:before{
+                        left: 125px;
+                    }
+                }
+                .years{
+                    bottom: inherit;
+                    left: inherit;
+                    right: 42px;
+                    top: 75px;
+                    width: 68%;
+                }
+                .arrows-timeline{
+                    bottom: 20px;
+                    left: 200px;
+                    text-align: center;
+                    transform: inherit;
+                    top: inherit;
+                    right: inherit;
+                    width: 28%;
+                    .slick-arrow{
+                        display: inline-block;
+                    }
+                    .slick-prev{
+                        margin-right: 25px;
+                        transform: rotate(0deg);
+                    }
+                    .slick-next{
+                        transform: rotate(0deg);
+                    }
+                }
+                .slick-years{
+                    padding: 0;
+                    .slick-slide{
+                        margin-left: 0;
+                        &.slick-current {
+                            display: block;
+                            font-size: 35px;
+                            font-weight: 800;
+                            margin-left: 0;
+                            .year{
+                                color: color(primary, base);
+                                font-size: 55px;
+                                margin: 0 0 100px;
+                                opacity: 1;
+                                padding: 0;
+                                text-align: left;
+                            }
+                            h3{
+                                font-size: 25px;
+                                margin: 0;
+                                overflow: visible;
+                                text-align: start;
+                                white-space: normal;
+                                width: 220px;
+                                &::after{
+                                    color: #FFCA33;
+                                    content: '\e909';
+                                    display: block;
+                                    font-family: "iconFont";
+                                    font-size: 8px;
+                                    padding-top: 7px;
+                                }
+                            }
+                            &:before{
+                                font-size: 48px;
+                                left: inherit;
+                                opacity: 1;
+                                right: 0;
+                                top: 23px;
+                            }
+                        }
+                        .year{
+                            font-size: 25px;
+                            height: auto;
+                            margin-left: 0;
+                            margin-top: 0;
+                            text-align: center;
+                        }
+                        h3{
+                            font-size: 16px;
+                            margin: 30px auto 0;
+                            text-align: center;
+                        }
+                        &:before{
+                            left: 50%;
+                            top: 34px;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+                .slick-timeline{
+                    .item{
+                        display: flex;
+                        .timeline-visual{
+                            margin-left: 60px;
+                            padding-bottom: 60px;
+                            padding-top: 40px;
+                            position: static;
+                            transform: rotate(2deg);
+                            width: 16%;
+                            .time-img{
+                                max-width: 174px;
+                            }
+                        }
+                        .img-time-des{
+                            width: 50%;
+                            .card-img{
+                                max-height: max-content;
+                            }
+                        }
+                        .timeline-detail{
+                            margin: 200px 0 0;
+                            padding: 0 35px 0 70px;
+                            width: 33%;
+                            p{
+                                line-height: 1.8;
+                                max-width: 100%;
+                                padding: 0 0 14px 0;
+                                &::after{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .timeline-two{
+        .his-corona{
+            .timeline-block{
+                &::before{
+                    left: 33%;
+                    top: 194px;
+                    width: 55%;
+                }
+                .arrows-timeline{
+                    width: 37%;
+                }
+                .slick-years{
+                    .slick-slide{
+                        &.slick-current{
+                            h3{
+                                margin: 0 0 0 5%;
+                            }
+                            &:before{
+                                left: 32px;
+                                top: 83px;
+                            }
+                        }
+                        .year{
+                            margin-top: 74px;
+                        }
+                        &:before{
+                            height: 21px;
+                            top: 108px;
+                            width: 21px;
+                        }
+                    }
+                }
+                .slick-timeline{
+                    .item{
+                        .timeline-visual{
+                            margin-left: 0;
+                            padding-left: 100px;
+                            width: 29%;
+                            .time-img{
+                                margin: 0 auto;
+                            }
+                        }
+                        .timeline-detail{
+                            margin: 335px 0 0;
+                            padding: 0 30px 0 0;
+                            width: 21%;
+                            p{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mq-min(lg){
+    .timeline-one{
+        .his-modelo{
+            .timeline-block{
+                .flechas-timeline{
+                    width: 37%;
+                }
+                .carrusel-years{
+                    .slick-slide{
+                        &.slick-current{
+                            h2{
+                                &:before{
+                                    left: 161px;
+                                }
+                            }
+                            span:before{
+                                right: 22px;
+                            }
+                        }
+                        span{
+                            &::before{
+                                left: inherit;
+                                right: 10px;
+                            }
+                        }
+                    }
+                }
+                .carrusel-timeline{
+                    .item{
+                        .timeline-visual{
+                            margin-left: 0;
+                            padding-left: 100px;
+                            width: 30%;
+                            .time-img{
+                                margin: 0 auto;
+                            }
+                        }
+                        .timeline-detail{
+                            padding: 0 50px 0 0;
+                            width: 20%;
+                            p{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .timeline-two{
+        .his-corona{
+            .timeline-block{
+                &::before{
+                    left: 33%;
+                    top: 194px;
+                    width: 55%;
+                }
+                .arrows-timeline{
+                    width: 37%;
+                }
+                .slick-years{
+                    .slick-slide{
+                        &.slick-current{
+                            h3{
+                                width: 250px;
+                            }
+                            &:before{
+                                left: 32px;
+                            }
+                        }
+                        .year{
+                            margin-top: 74px;
+                        }
+                        &:before{
+                            height: 21px;
+                            top: 108px;
+                            width: 21px;
+                        }
+                    }
+                }
+                .slick-timeline{
+                    .item{
+                        .timeline-visual{
+                            margin-left: 0;
+                            padding-left: 100px;
+                            width: 29%;
+                            .time-img{
+                                margin: 0 auto;
+                            }
+                        }
+                        .timeline-detail{
+                            margin: 340px 0 0;
+                            padding: 0 30px 0 10px;
+                            width: 21%;
+                            p{
+                                font-size: 12px;
+                                padding: 0 0 100px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

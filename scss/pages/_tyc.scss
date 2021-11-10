@@ -1,0 +1,98 @@
+.warpper{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  .radio{
+    display:none;
+  }
+  #one:checked ~ .panels #one-panel,
+  #two:checked ~ .panels #two-panel,
+  #three:checked ~ .panels #three-panel{
+    display:block
+  }
+  #one:checked ~ .tabs #one-tab,
+  #two:checked ~ .tabs #two-tab,
+  #three:checked ~ .tabs #three-tab{
+    background:#fffffff6;
+    color:#000;
+    border-bottom: 3px solid #000;
+  }
+  .panels{
+    background:#fffffff6;
+    box-shadow: 0 2rem 2rem #00000080;
+    min-height:200px;
+    width:100%;
+    max-width:500px;
+    border-radius:3px;
+    overflow:hidden;
+    padding:20px;
+    .panel{
+      display:none;
+      animation: fadein .8s;
+      #container-main{
+        margin:40px auto;
+        width:95%;
+        min-width:320px;
+        max-width:960px;
+        .accordion-container {
+          width: 100%;
+          margin: 0 0 20px;
+          clear:both;
+          .accordion-titulo {
+            position: relative;
+            display: block;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: 300;
+            background: #2c3e50;
+            color: #fff;
+            text-decoration: none;
+            .toggle-icon{
+              &:before{
+                content: '\e900';
+                font-family: 'iconFont';
+              }
+            }
+            &.open {
+              background: #16a085;
+              color: #fff;
+              .toggle-icon{
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                font-size: 38px;
+                font-weight:bold;
+                &:before{
+                  content: '\e901';
+                  font-family: 'iconFont';
+                }
+              }
+            }
+            &:hover {
+              background: #1abc9c;
+            }
+          }
+          .accordion-content {
+            display: none;
+            padding: 10px 0;
+            overflow: auto;
+            p{
+              margin:0;
+            }
+          }
+        }
+      }
+    }
+    @keyframes fadein {
+      from {
+          opacity:0;
+      }
+      to {
+          opacity:1;
+      }
+    }
+  }
+}
+@include mq-min(md){
+  padding: 20px;
+}

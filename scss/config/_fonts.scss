@@ -1,0 +1,25 @@
+
+// ==========================================================================
+// Importación de la typografia desde URL externa
+// ==========================================================================
+
+$font-url--google   : url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet');
+@if variable-exists( $font-url--google) {
+   @import url($font-url--google);
+}
+
+// ==========================================================================
+// Importación de fuente de iconos
+// ==========================================================================
+
+@font-face {
+   font-family: 'iconFont';
+   src:  url('../fonts/iconFont/iconFont.eot?6hhukf');
+   src:  url('../fonts/iconFont/iconFont.eot?6hhukf#iefix') format('embedded-opentype'),
+      url('../fonts/iconFont/iconFont.ttf?6hhukf') format('truetype'),
+      url('../fonts/iconFont/iconFont.woff?6hhukf') format('woff'),
+      url('../fonts/iconFont/iconFont.svg?6hhukf#icomoon') format('svg');
+   font-weight: normal;
+   font-style: normal;
+   font-display: block;
+ }

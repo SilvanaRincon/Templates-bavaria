@@ -1,0 +1,117 @@
+.navbar-default{
+    background: color(grayscale, gray-1);
+    border: 0;
+    border-radius: 0;
+    &.container{
+        max-width: 100%;
+        width: 100%;
+    }
+    .navbar-collapse{
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-nav{
+        margin: 0;
+        li{
+            a{
+                color: color(controls, base);
+            }
+        }
+    }
+}
+
+.menu{
+    li{
+        display: inline-block;
+        a{
+           color: color(controls, base);
+           &:hover,
+           &:focus{
+            background: none;
+           }
+        }
+    }
+}
+
+@include mq-max(sm) {
+    .navbar-default{
+        .container{
+            .navbar-toggle{
+                background-color:transparent;
+                border:none;
+                position: absolute;
+                right: -10px;
+                top: 3px;
+                @include prefix(transition, transform .5s ease-in-out, webkit moz o ms);
+                span{
+                    left: 0;
+                    opacity: 1;
+                    position: relative;
+                    @include prefix(transform, rotate(0deg), webkit moz o ms);
+                    &:nth-child(2),
+                    &:nth-child(4){
+                        @include prefix(transition, transform .5s ease-in-out, webkit moz o ms);
+                    }
+                    &.sr-only{
+                        display: none;
+                    }
+                }
+                &:not(.collapsed){
+                    top: 3px;
+                    span{
+                       &:nth-child(2){
+                            left: 12px;
+                            position: absolute;
+                            opacity: 0.9;
+                            top: 13px;
+                            @include prefix(transform, rotate(135deg), webkit moz o ms);
+                        } 
+                        &:nth-child(3){
+                            background-color: transparent;
+                            height: 12px;
+                            visibility: hidden;
+                        }
+                        &:nth-child(4) {
+                            left: 12px;
+                            opacity: 0.9;
+                            position: absolute;
+                            top: 9px;
+                            @include prefix(transform, rotate(-135deg), webkit moz o ms);
+                        }
+                    }
+                }
+            }
+            .navbar-collapse{
+                background: color(grayscale, gray-1);
+                display: block;
+                height: 100%;
+                overflow: inherit;
+                position:fixed;
+                top: 55px;
+                right: -100%;
+                width: 100%;
+                z-index: 9;
+                @include prefix(transition, all .5s, webkit moz o ms);
+                &.collapsing{
+                    display: block;
+                    height: 100%!important;
+                    width: 100%;
+                }
+                &.in{
+                    right: -0px;
+                    top: 55px;
+                    @include prefix(transition, all .5s, webkit moz o ms);
+                }
+                &.out{
+                    right: 10px;
+                    @include prefix(transition, all .5s, webkit moz o ms);
+                }
+            }
+        }
+    }
+    .menu{
+        li{
+            display: block;
+        }
+    }
+}
