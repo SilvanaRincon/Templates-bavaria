@@ -11,7 +11,9 @@
         font-weight: bold;
         text-align: center;
         a{
+            color: color(grayscale, black);
             font-size: map-get($sizes, thumb);
+            font-weight: bold;
         }
         &::before{
             display: none;
@@ -27,7 +29,7 @@
 
 @include mq-min(sm){
     .breadcrumb{
-        align-items: center;
+        align-items: baseline;
         display: flex;
         margin: 80px 0;
         li{

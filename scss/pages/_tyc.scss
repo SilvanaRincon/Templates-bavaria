@@ -13,13 +13,16 @@
   #one:checked ~ .tabs #one-tab,
   #two:checked ~ .tabs #two-tab,
   #three:checked ~ .tabs #three-tab{
-    background:#fffffff6;
+    background:color(primary, base);
     color:#000;
+    font-weight: bold;
+  }
+  .tabs{
     border-bottom: 3px solid #000;
+    display: flex;
   }
   .panels{
-    background:#fffffff6;
-    box-shadow: 0 2rem 2rem #00000080;
+    background:color(grayscale, white);
     min-height:200px;
     width:100%;
     max-width:500px;
@@ -39,29 +42,33 @@
           margin: 0 0 20px;
           clear:both;
           .accordion-titulo {
-            position: relative;
-            display: block;
-            padding: 20px;
+            align-items: center;
+            background: color(grayscale, gray-3);
+            color: color(grayscale, gray-7);
+            display: flex;
             font-size: 24px;
             font-weight: 300;
-            background: #2c3e50;
-            color: #fff;
+            justify-content: space-between;
+            padding: 12px 20px;
+            position: relative;
             text-decoration: none;
             .toggle-icon{
+              align-items: center;
+              background: color(primary, base);
+              display: flex;
+              height: 25px;
+              justify-content: center;
+              width: 25px;
               &:before{
                 content: '\e900';
                 font-family: 'iconFont';
               }
             }
             &.open {
-              background: #16a085;
-              color: #fff;
+              background: color(primary, base);
               .toggle-icon{
-                position: absolute;
-                top: 10px;
-                right: 20px;
-                font-size: 38px;
-                font-weight:bold;
+                background: color(grayscale, black);
+                color: color(primary, base);
                 &:before{
                   content: '\e901';
                   font-family: 'iconFont';
@@ -69,7 +76,11 @@
               }
             }
             &:hover {
-              background: #1abc9c;
+              background: color(primary, base);
+              .toggle-icon{
+                background: color(grayscale, black);
+                color: color(primary, base);
+              }
             }
           }
           .accordion-content {
@@ -81,6 +92,10 @@
             }
           }
         }
+      }
+      .panel_content{
+        margin: auto;
+        width: 95%;
       }
     }
     @keyframes fadein {
@@ -94,5 +109,45 @@
   }
 }
 @include mq-min(md){
+  .container{
+    .breadcrumb{
+      margin: auto;
+      max-width: 960px;
+    }
+  }
+  .warpper{
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 50px auto;
+    max-width: 960px;
+    #one:checked ~ .tabs #one-tab,
+    #two:checked ~ .tabs #two-tab,
+    #three:checked ~ .tabs #three-tab{
+      background:color(grayscale, white);
+      color:#000;
+      font-weight: bold;
+     text-decoration: underline;
+    }
+    .tabs{
+      border-bottom: none;
+      border-right: 3px solid #000;
+      flex-wrap: wrap;
+      width: 30%;
+      .tab{
+        background: color(grayscale, white);
+        color: color(grayscale, gray-4);
+      }
+    }
+    .panels{
+      max-width: none;
+      padding: 0;
+      width: 70%;
+      .panel{
+        #container-main{
+          margin: auto;
+        }
+      }
+    }
+  }
   padding: 20px;
 }

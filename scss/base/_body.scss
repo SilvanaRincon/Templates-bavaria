@@ -50,11 +50,11 @@ h6{
 .secundary-subtitle{
   @extend %secondary-subtitles;
 }
-ol,
+/*ol,
 ul{
   margin-bottom: map-get($sizes, "base");
   padding-left: map-get($sizes, "half");
-}
+}*/
 
 ol{
   counter-reset: item;

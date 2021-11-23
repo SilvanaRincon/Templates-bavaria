@@ -1,4 +1,4 @@
-.nav-tabs{
+/*.nav-tabs{
     background: color(grayscale, gray-1);
     border: 0;
     display: flex;
@@ -28,14 +28,16 @@
             }
         }
     }
-}
+}*/
 
 .tab{
-    cursor: pointer;
-    padding:10px 20px;
-    margin:0px 2px;
-    display:inline-block;
+    align-items: center;
+    background: color(grayscale, gray-3);
     color:#000;
-    border-radius:3px 3px 0px 0px;
-    box-shadow: 0 0.5rem 0.8rem #00000080;
-  }
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    margin:0px 5px;
+    padding:10px 20px;
+    text-align: center;
+}
